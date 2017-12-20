@@ -1,0 +1,61 @@
+<header class="navbar navbar-fixed-top navbar-inverse">
+  <div class="navbar-inner">
+    <div class="container">
+     
+      <%= link_to "Car Sale", root_path , id: "logo" %>
+      
+      <nav>
+         <div class = "center">
+        <ul class="nav pull-right">
+          <li><%= link_to "Home", root_path %></li>  
+           <li><%= link_to "Shop", shop_path %></li>
+      <ul class="nav pull-right">
+              <ul class="nav nav-pills">
+      <li class="dropdown">
+        <a class="dropdown-toggle" data-toggle="dropdown" href="#">Menu<b class="caret"></b></a>
+        <ul id="menu1" class="dropdown-menu">
+          <li><%= link_to "Add car", add_car_path %></li>
+          <li class="divider"></li>
+          <li><%= link_to "Profile info", profile_info_path %></li>
+        </ul>
+      </li>
+    </ul>
+
+
+
+<ul class="nav pull-right">
+              <ul class="nav nav-pills">
+      <li class="dropdown">
+        <a class="dropdown-toggle" data-toggle="dropdown" href="#">Authentication<b class="caret"></b></a>
+        <ul id="menu1" class="dropdown-menu">
+ <% if current_model.nil? %>
+    <li>
+    <%= link_to model_session_path do %>
+      <i class="glyphicon glyphicon-user"></i> Login
+      <%end%>
+      </li>
+      <% else %> 
+      <li>
+      <%= link_to destroy_model_session_path, method: :delete do %>
+      <i class="glyphicon glyphicon-log-in"></i> Logout
+  <%end%>
+      </li>
+       <% end %>
+          <li class="divider"></li>
+         <li> <%= link_to "Sign up now!", new_model_registration_path %></li>
+        </ul>
+      </li>
+    </ul>
+     </ul>
+
+
+
+
+
+
+
+         </div>
+      </nav>
+    </div>
+  </div>
+</header>
