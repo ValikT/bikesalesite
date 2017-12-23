@@ -5,8 +5,4 @@ class Model < ApplicationRecord
          :recoverable, :rememberable, :trackable, :validatable
    
 
-  validates :nickname, presence: true 
-  validates :nickname, length: { in: 3..12 }
-
-
 end
