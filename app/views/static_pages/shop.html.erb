@@ -1,2 +1,25 @@
-<h1>Choose the car of your dream !</h1>
-<p>Will be able soon</p>
+<div class="five"><h1>the category</h1></div>
+
+
+<div>
+	<div class="container" style="padding-left: 3%;">
+	<div class="container-fluid text-center bg-grey">
+	<%@categories.each do |category|%>
+
+	  <div class="col-lg-4">
+	    	<div class="thumbnail">
+			
+			<p><strong><h3 style="color: #F5DEB3;">
+				<b><%= link_to category.name, category_path(category.id) %></b>
+				</h3></strong></p>
+			
+			
+			</br>
+			</div>
+
+	</div>
+
+	<%end%>
+	</div>
+	</div>
+</div>

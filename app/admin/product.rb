@@ -1,21 +1,15 @@
 ActiveAdmin.register Product do
-  permit_params :category_id, :description, :image, :name, :price_cents, :upc_code, :price, :taxable
-
-  index do
-    id_column
-    column :name
-    column :category_id
-    column :price_cents
-    actions
-  end
-
-  form do |f|
-    f.inputs "Product Details" do
-      f.input :price
-      f.input :name
-      f.input :category_id
-      # more fields
-    end
-    f.actions
-  end
+# See permitted parameters documentation:
+# https://github.com/activeadmin/activeadmin/blob/master/docs/2-resource-customization.md#setting-up-strong-parameters
+#
+# permit_params :list, :of, :attributes, :on, :model
+#
+# or
+#
+# permit_params do
+#   permitted = [:permitted, :attributes]
+#   permitted << :other if params[:action] == 'create' && current_user.admin?
+#   permitted
+# end
+permit_params :name,:description,:counts,:category_id,:price,:image
 end

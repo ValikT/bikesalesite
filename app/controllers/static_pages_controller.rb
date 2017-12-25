@@ -1,8 +1,10 @@
 class StaticPagesController < ApplicationController
+
   def home
   end
 
   def shop
+    @categories=Category.all
   end
 
   def contact
