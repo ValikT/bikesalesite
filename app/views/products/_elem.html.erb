@@ -3,18 +3,23 @@
 			<div class="col-lg-4">
 				<div class="thumbnail">
 
-					<p><strong><h3 style="color: ##F5DEB3;"></h3></strong></p>
+					<p><strong><h3 style="color: #0772A1;"></h3></strong></p>
+					
 					<h3><%= product.name %></h3>
-				
-					<h4>Price: <span style="color: green;"><%= product.price %> $</span></h4>
-					<%if @orders == nil or @orders[product.id] == nil %>
-					<%= link_to "Add to cart", order_path(id: product.id), method: :post %>
-					<%else%>
-					<%= link_to "Delete", order_path(@orders[product.id].id) ,method: :delete %>
-					<%end%></p>
+					
+					<p><%=product.description%></p>
+<h4>Price: <span style="color: green;"><%= product.price %> $</span></h4>
+  
+
+
+   <p> <%= link_to "Add to Card", shop_path %> </p>
+ 
+
 				</div>
 			
 			</div>
 		
 		</div>
+		
 	</div>
+	<p align="center"> <%= link_to "Back to All Products", shop_path %> </p>

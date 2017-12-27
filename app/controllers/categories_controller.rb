@@ -7,7 +7,7 @@ def show
 	if current_admin_user !=nil
 	@orders=[]
 	@products.each do |product|
-		@orders[product.id]=Order.where(user_id: current_admin_user.id ,product_id: product).first
+		
 
 	end
 

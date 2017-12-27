@@ -2,7 +2,7 @@ class ProductsController < ApplicationController
 
 	def show
 		@product=Product.find(params[:id])
-		@order=Order.where(product_id: product).first
+		
 	end
 
 	def edit
@@ -18,5 +18,5 @@ private
 	def product_params
 		params.require(:product).permit(:name,:description,:image)
 	end
-
 end
+

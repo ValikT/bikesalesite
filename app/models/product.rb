@@ -1,5 +1,5 @@
-class Product < ApplicationRecord
-	
-	belongs_to :category
-	has_many :orders
+class Product < ActiveRecord::Base
+ 
+  belongs_to :category
+ 
 end
