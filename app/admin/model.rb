@@ -12,6 +12,6 @@ ActiveAdmin.register Model do
 #   permitted
 # end
 
-permit_params :nickname
+
 
 end
