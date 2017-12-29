@@ -4,15 +4,19 @@
 				<div class="thumbnail">
 
 					<p><strong><h3 style="color: #0772A1;"></h3></strong></p>
+					
 					<img src="<%=product.image_file_name%>">
+
 					<h3><%= product.name %></h3>
 					
 					<p><%=product.description%></p>
+
 <h4>Price: <span style="color: green;"><%= product.price %> $</span></h4>
   
 
+        <p><%= link_to "Details", product %></p>
 
-   <p> <%= link_to "Add to Card", shop_path %> </p>
+   <p> <%= link_to "Add to Cart", shop_path %> </p>
  
 
 				</div>

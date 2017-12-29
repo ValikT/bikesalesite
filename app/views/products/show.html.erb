@@ -1,4 +1,28 @@
-<img src="<%=@product.image_file_name%>">
-<%=@product.name%>
-<%=@product.category.name%>
-<%=@product.description%>
+<main class="container1">
+ 
+<!-- Left Column / Headphones Image -->
+  <div class="image">
+<img src="<%=@product.image_file_name%>" alt="Product picture">
+  </div>
+ 
+ 
+  <!-- Right Column -->
+  <div class="right-column">
+ 
+    <!-- Product Description -->
+    <div class="product-description">
+      <span>Product:</span>
+      <h3><%=@product.name %></h3>
+      <p><%=@product.description%></p>
+    </div>
+    
+ 
+    <!-- Product Pricing -->
+    <div class="product-price">
+     <span>Price: <%=@product.price %> $</span>
+      <div class="cart-btn">
+      <%= link_to "Add to Cart", shop_path %>
+      </div>
+    </div>
+    </div>
+</main>
