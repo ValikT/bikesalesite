@@ -21,7 +21,7 @@
     <div class="product-price">
      <span>Price: <%=@product.price %> $</span>
       <div class="cart-btn">
-      <%= link_to "Add to Cart", shop_path %>
+      <%= link_to "Add to Cart", add_to_cart_path(@product.id) %>
       </div>
     </div>
     </div>

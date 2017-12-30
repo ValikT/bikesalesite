@@ -301,6 +301,20 @@ img {
   background-color: #64af3d;
 }
 
+.cart-btnn {
+  display: inline-block;
+  background-color: #2196F3;
+  border-radius: 6px;
+  font-size: 16px;
+  color: #FFFFFF;
+  text-decoration: none;
+  padding: 5px 30px;
+  transition: all .5s;
+}
+.cart-btnn:hover {
+  background-color: #0b7dda;
+}
+
 
 
 
@@ -324,4 +338,3 @@ img {
     0 10px 10px rgba(0,0,0,.2),
     0 20px 20px rgba(0,0,0,.15);
 }
-

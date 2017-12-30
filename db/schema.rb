@@ -50,6 +50,16 @@ ActiveRecord::Schema.define(version: 20171227182310) do
     t.datetime "updated_at", null: false
   end
 
+  create_table "line_items", force: :cascade do |t|
+    t.integer "order_id"
+    t.integer "product_id"
+    t.decimal "price"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["order_id"], name: "index_line_items_on_order_id"
+    t.index ["product_id"], name: "index_line_items_on_product_id"
+  end
+
   create_table "models", force: :cascade do |t|
     t.string "email", default: "", null: false
     t.string "encrypted_password", default: "", null: false
@@ -65,6 +75,16 @@ ActiveRecord::Schema.define(version: 20171227182310) do
     t.datetime "updated_at", null: false
     t.index ["email"], name: "index_models_on_email", unique: true
     t.index ["reset_password_token"], name: "index_models_on_reset_password_token", unique: true
+  end
+
+  create_table "orders", force: :cascade do |t|
+    t.integer "model_id"
+    t.datetime "checked_out_at"
+    t.decimal "total_price", precision: 8, scale: 2, default: "0.0"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["checked_out_at"], name: "index_orders_on_checked_out_at"
+    t.index ["model_id"], name: "index_orders_on_model_id"
   end
 
   create_table "products", force: :cascade do |t|
