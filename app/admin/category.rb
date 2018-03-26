@@ -1,5 +1,5 @@
 ActiveAdmin.register Category do
-	  menu priority: 4
+	  menu priority: 5
 # See permitted parameters documentation:
 # https://github.com/activeadmin/activeadmin/blob/master/docs/2-resource-customization.md#setting-up-strong-parameters
 #
@@ -13,6 +13,6 @@ ActiveAdmin.register Category do
 #   permitted
 # end
 
-permit_params :name,:description
+permit_params :name,:description,:image_file_name
 
 end

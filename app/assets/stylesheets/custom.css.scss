@@ -43,7 +43,7 @@ h1 {
 }
 
 h2 {
-  font-size: 1.2em;
+  font-size: 1.5em;
   letter-spacing: -1px;
   margin-bottom: 30px;
   text-align: center;
@@ -63,6 +63,7 @@ p {
 #logo 
 
 {
+font: 15pt sans-serif;  
   float: left;
   margin-right: 10px;
   font-size: 2em;
@@ -84,7 +85,7 @@ p {
 /* footer */
 
 footer {
-  margin-top: 70px;
+  margin-top: 150px;
   padding-top: 5px;
   border-top: 1px solid #eaeaea;
   color: #999;
@@ -112,61 +113,6 @@ footer ul li {
   margin-left: 10px;
 }
 
-
-
-.five {
-  padding: 50px 20px 50px 170px;
-  text-align: center;
-} 
-.five h1 {
-  font-family: 'Open Sans', sans-serif;
-  font-weight: 400;
-  position: relative;
-  color: #587493;
-  font-size: 2.5em;
-  font-weight: normal;
-  display: inline-block;
-  margin: 0;
-  line-height: 1;
-  padding: 8px 20px 8px 2px;
-  border-top: 4px solid;
-}
-.five h1:before {
-  content: "Choose";
-  position: absolute;
-  top: -10px;
-  left: -160px;
-  font-size: 1.5em;
-  transform: rotate(-25deg);
-  font-family: 'Marck Script', cursive;
-}
-.five h1:after {
-  content: ""; 
-  position: absolute;
-  width: 120%;
-  height: 4px;
-  right: 0;
-  bottom: -4px;
-  background: #587493;
-}
-@media (max-width: 580px) {
-  .five {padding-left: 130px;}
-  .five h1 {font-size: 2em;}
-  .five h1:before {left: -130px;}
-}
-@media (max-width: 480px) {
-  .five {padding-left: 100px;}
-  .five h1 {
-    font-size: 1.5em;
-    padding-right: 10px;
-}
-  .five h1:before {left: -100px;}
-}
-@media (max-width: 380px) {
-  .five {padding-left: 90px;}
-  .five h1 {font-size: 1.3em;}
-  .five h1:before {left: -88px;}
-}
 
 
 .one {
@@ -236,8 +182,7 @@ footer ul li {
 
 /* Left Column */
 img {
-    max-width: 100%;
-    height: auto;
+ margin: 0 75px 0 0;
 }
 
 .item {
@@ -323,7 +268,7 @@ img {
   font-size: 2.5em;
   font-weight: bold;
   text-align: center;
-  color: #E6E6FA;
+  color: #FF7F50;
   text-shadow:
     0 1px 0 #CCCCCC,
     0 2px 0 #C9C9C9,
@@ -337,4 +282,176 @@ img {
     0 5px 10px rgba(0,0,0,.25),
     0 10px 10px rgba(0,0,0,.2),
     0 20px 20px rgba(0,0,0,.15);
+}
+
+.onn {
+  font-family: Verdana;
+  font-size: 3em;
+  font-weight: bold;
+  text-align: center;
+  color: #808080;
+  text-shadow:
+    0 1px 0 #CCCCCC,
+    0 2px 0 #C9C9C9,
+    0 3px 0 #BBBBBB,
+    0 4px 0 #B9B9B9,
+    0 5px 0 #AAAAAA,
+    0 6px 1px rgba(0,0,0,.1),
+    0 0 5px rgba(0,0,0,.1),
+    0 1px 3px rgba(0,0,0,.3),
+    0 3px 5px rgba(0,0,0,.2),
+    0 5px 10px rgba(0,0,0,.25),
+    0 10px 10px rgba(0,0,0,.2),
+    0 20px 20px rgba(0,0,0,.15);
+}
+
+
+#wrapper {
+    width:960px;
+    height:220px;
+     background: none;
+
+}
+.section {
+    border:solid 1px #999;
+    float:left;
+    height:360px;
+    margin-left:10px;
+    width:310px;
+    background: none;
+}
+#wrapper div:first-child {
+margin-left:0px;
+}
+
+.leftimg {
+    float:left; /* Выравнивание по левому краю */
+    margin: 30px 30px 30px 30px; /* Отступы вокруг картинки */
+   }
+
+
+
+
+
+
+/********************************/
+/*       Fade Bs-carousel       */
+/********************************/
+.fade-carousel {
+    position: relative;
+    height: 100vh;
+}
+.fade-carousel .carousel-inner .item {
+    height: 100vh;
+}
+.fade-carousel .carousel-indicators > li {
+    margin: 0 2px;
+    background-color: #f39c12;
+    border-color: #f39c12;
+    opacity: .7;
+}
+.fade-carousel .carousel-indicators > li.active {
+  width: 10px;
+  height: 10px;
+  opacity: 1;
+}
+
+/********************************/
+/*          Hero Headers        */
+/********************************/
+.hero {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    z-index: 3;
+    color: #fff;
+    text-align: center;
+    text-transform: uppercase;
+    text-shadow: 1px 1px 0 rgba(0,0,0,.75);
+      -webkit-transform: translate3d(-50%,-50%,0);
+         -moz-transform: translate3d(-50%,-50%,0);
+          -ms-transform: translate3d(-50%,-50%,0);
+           -o-transform: translate3d(-50%,-50%,0);
+              transform: translate3d(-50%,-50%,0);
+}
+.hero h1 {
+    font-size: 6em;    
+    font-weight: bold;
+    margin: 0;
+    padding: 0;
+}
+
+.fade-carousel .carousel-inner .item .hero {
+    opacity: 0;
+    -webkit-transition: 2s all ease-in-out .1s;
+       -moz-transition: 2s all ease-in-out .1s; 
+        -ms-transition: 2s all ease-in-out .1s; 
+         -o-transition: 2s all ease-in-out .1s; 
+            transition: 2s all ease-in-out .1s; 
+}
+.fade-carousel .carousel-inner .item.active .hero {
+    opacity: 1;
+    -webkit-transition: 2s all ease-in-out .1s;
+       -moz-transition: 2s all ease-in-out .1s; 
+        -ms-transition: 2s all ease-in-out .1s; 
+         -o-transition: 2s all ease-in-out .1s; 
+            transition: 2s all ease-in-out .1s;    
+}
+
+/********************************/
+/*            Overlay           */
+/********************************/
+.overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+    background-color: #080d15;
+    opacity: .7;
+}
+
+/********************************/
+/*          Custom Buttons      */
+/********************************/
+.btn.btn-lg {padding: 10px 40px;}
+.btn.btn-hero,
+.btn.btn-hero:hover,
+.btn.btn-hero:focus {
+    color: #f5f5f5;
+    background-color: #1abc9c;
+    border-color: #1abc9c;
+    outline: none;
+    margin: 20px auto;
+}
+
+/********************************/
+/*       Slides backgrounds     */
+/********************************/
+.fade-carousel .slides .slide-1, 
+.fade-carousel .slides .slide-2,
+.fade-carousel .slides .slide-3 {
+  height: 100vh;
+  width: 200vh;
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+.fade-carousel .slides .slide-1 {
+  background-image: url(https://ununsplash.imgix.net/photo-1416339134316-0e91dc9ded92?q=75&fm=jpg&s=883a422e10fc4149893984019f63c818); 
+}
+.fade-carousel .slides .slide-2 {
+  background-image: url(https://ununsplash.imgix.net/photo-1416339684178-3a239570f315?q=75&fm=jpg&s=c39d9a3bf66d6566b9608a9f1f3765af);
+}
+.fade-carousel .slides .slide-3 {
+  background-image: url(https://ununsplash.imgix.net/photo-1416339276121-ba1dfa199912?q=75&fm=jpg&s=9bf9f2ef5be5cb5eee5255e7765cb327);
+}
+
+/********************************/
+/*          Media Queries       */
+/********************************/
+@media screen and (min-width: 980px){
+    .hero { width: 980px; }    
+}
+@media screen and (max-width: 640px){
+    .hero h1 { font-size: 4em; }    
 }

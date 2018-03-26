@@ -15,7 +15,7 @@ Rails.application.routes.draw do
   match '/about',   to: 'static_pages#about',   via: 'get'
   match '/contact', to: 'static_pages#contact', via: 'get'
   match '/add_car', to: 'static_pages#add_car', via: 'get'
-  match '/profile_info', to: 'static_pages#profile_info', via: 'get'
+  match '/our_advantages', to: 'static_pages#our_advantages', via: 'get'
 
 
  root 'static_pages#home'

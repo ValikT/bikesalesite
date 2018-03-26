@@ -29,6 +29,6 @@ class Order < ActiveRecord::Base
 
   def display_name
     ActionController::Base.helpers.number_to_currency(total_price) +
-        " - Order ##{id} (#{user.email})"
+        " - Order ##{id} (#{model.email})"
   end
 end

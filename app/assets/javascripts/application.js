@@ -17,3 +17,6 @@
 //= require bootstrap
 
 $('.dropdown-toggle').dropdown()
+
+
+

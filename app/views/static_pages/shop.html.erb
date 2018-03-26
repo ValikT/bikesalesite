@@ -1,25 +1,21 @@
-<div class="five"><h1>the category</h1></div>
+<hr>
+<div class="onn">Оберіть категорію</div>
+<br>
+<hr>
 
 
-<div>
-	<div class="container" style="padding-left: 3%;">
-	<div class="container-fluid text-center bg-grey">
+
+<div id="wrapper">
 	<%@categories.each do |category|%>
-
-	  <div class="col-lg-4">
-	    	<div class="thumbnail">
+	 <div class="section">
 			
-			<p><strong><div class="on">
+  			<p><strong><div class="on">
 				<b><%= link_to category.name, category_path(category.id) %></b>
+				<hr>
+				<center>
+				<img src="<%=category.image_file_name%>" width="300" height="300">
 				</div></strong></p>
-			
-			
-			</br>
+			</center>
 			</div>
-
-	</div>
-
 	<%end%>
-	</div>
-	</div>
 </div>

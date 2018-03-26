@@ -1,8 +1,8 @@
 <main class="container1">
  
 <!-- Left Column / Headphones Image -->
-  <div class="image">
-<img src="<%=@product.image_file_name%>" alt="Product picture">
+  <div class="img">
+<img src="<%=@product.image_file_name%>" width="400" height="400" alt="Product picture">
   </div>
  
  
@@ -19,9 +19,9 @@
  
     <!-- Product Pricing -->
     <div class="product-price">
-     <span>Price: <%=@product.price %> $</span>
+     <span>Ціна: <%=@product.price %> $</span>
       <div class="cart-btn">
-      <%= link_to "Add to Cart", add_to_cart_path(@product.id) %>
+      <%= link_to "Замовити", add_to_cart_path(@product.id) %>
       </div>
     </div>
     </div>

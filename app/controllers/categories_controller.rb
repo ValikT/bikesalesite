@@ -27,6 +27,6 @@ end
 
 private
 def cat_params
-params.require(:category).permit(:name,:description,:photo)
+params.require(:category).permit(:name,:description,:image)
 end
 end
