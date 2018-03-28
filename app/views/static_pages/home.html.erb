@@ -1,50 +1,65 @@
-<link href="//netdna.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
-<script src="//netdna.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
-<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
-<!------ Include the above in your HEAD tag ---------->
+<!DOCTYPE html>
+<html>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<style>
+.mySlides {display:none}
+.demo {cursor:pointer}
+</style>
+<body>
 
-<div class="carousel fade-carousel slide" data-ride="carousel" data-interval="4000" id="bs-carousel">
-  <!-- Overlay -->
-  <div class="overlay"></div>
+<hr>
+<hr>
+ 
 
-  <!-- Indicators -->
-  <ol class="carousel-indicators">
-    <li data-target="#bs-carousel" data-slide-to="0" class="active"></li>
-    <li data-target="#bs-carousel" data-slide-to="1"></li>
-    <li data-target="#bs-carousel" data-slide-to="2"></li>
-  </ol>
-  
-  <!-- Wrapper for slides -->
-  <div class="carousel-inner">
-    <div class="item slides active">
-      <div class="slide-1"></div>
-      <div class="hero">
-        <hgroup>
-            <h1>We are creative</h1>        
-            <h3>Get start your next awesome project</h3>
-        </hgroup>
-        <button class="btn btn-hero btn-lg" role="button">See all features</button>
-      </div>
+<div class="w3-content" style="max-width:100%">
+  <img class="mySlides" src="https://www.petervardy.com/uploads/images/gallery/1457967121BMW_4S_Convertible_2000_1125_1.jpg" style="width:100%">
+  <img class="mySlides" src="https://www.petervardy.com/uploads/images/gallery/1458837327BMW_4S_Gran_Coupe_2000_1125_2.jpg" style="width:100%">
+  <img class="mySlides" src="https://www.petervardy.com/uploads/images/gallery/1458837323BMW_4S_Gran_Coupe_2000_1125_1.jpg" style="width:100%">
+
+  <div class="w3-row-padding w3-section">
+    <div class="w3-col s4">
+      <img class="demo w3-opacity w3-hover-opacity-off" src="https://www.petervardy.com/uploads/images/gallery/1457967121BMW_4S_Convertible_2000_1125_1.jpg" style="width:100%" onclick="currentDiv(1)">
     </div>
-    <div class="item slides">
-      <div class="slide-2"></div>
-      <div class="hero">        
-        <hgroup>
-            <h1>We are smart</h1>        
-            <h3>Get start your next awesome project</h3>
-        </hgroup>       
-        <button class="btn btn-hero btn-lg" role="button">See all features</button>
-      </div>
+    <div class="w3-col s4">
+      <img class="demo w3-opacity w3-hover-opacity-off" src="https://www.petervardy.com/uploads/images/gallery/1458837327BMW_4S_Gran_Coupe_2000_1125_2.jpg" style="width:100%" onclick="currentDiv(2)">
     </div>
-    <div class="item slides">
-      <div class="slide-3"></div>
-      <div class="hero">        
-        <hgroup>
-            <h1>We are amazing</h1>        
-            <h3>Get start your next awesome project</h3>
-        </hgroup>
-        <button class="btn btn-hero btn-lg" role="button">See all features</button>
-      </div>
+    <div class="w3-col s4">
+      <img class="demo w3-opacity w3-hover-opacity-off" src="https://www.petervardy.com/uploads/images/gallery/1458837323BMW_4S_Gran_Coupe_2000_1125_1.jpg" style="width:100%" onclick="currentDiv(3)">
     </div>
-  </div> 
+  </div>
 </div>
+
+<script>
+var slideIndex = 1;
+showDivs(slideIndex);
+
+function plusDivs(n) {
+  showDivs(slideIndex += n);
+}
+
+function currentDiv(n) {
+  showDivs(slideIndex = n);
+}
+
+function showDivs(n) {
+  var i;
+  var x = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("demo");
+  if (n > x.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = x.length}
+  for (i = 0; i < x.length; i++) {
+     x[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+     dots[i].className = dots[i].className.replace(" w3-opacity-off", "");
+  }
+  x[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " w3-opacity-off";
+}
+</script>
+
+</body>
+</html>
+
+
