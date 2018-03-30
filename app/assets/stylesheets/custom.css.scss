@@ -59,7 +59,13 @@ p {
 
 
 /* header */
-
+ header nav {
+        height: auto;
+        width: auto;
+        display: block;
+        text-align: center;
+    }
+    
 #logo 
 
 {
@@ -77,6 +83,22 @@ font: 15pt sans-serif;
 #logo:hover {
   color: #fff;
   text-decoration: none;
+}
+@media screen and (max-width: 720px){
+     
+    header {
+        height: auto;
+    }
+     
+    header > div,
+    header > div h1,
+    header nav {
+        height: auto;
+        width: auto;
+        display: block;
+        text-align: center;
+    }
+     
 }
 
 
