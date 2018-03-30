@@ -15,16 +15,8 @@
 //= require_tree .
 //= require jquery
 //= require bootstrap
-$(document).ready(function(){
-
-  $('.navicon').click(function(e){
-  	$(this).next().slideToggle(500);
-  });
-
-});
 
 $('.dropdown-toggle').dropdown()
-
 
 
 

@@ -60,47 +60,6 @@ p {
 
 /* header */
 
-header {
-
-.logo {
-  float: left;
-}
-.desktop {
-  float: right;
-  display: flex;
-}
-.navicon {
-  float: right;
-  transform: rotate(90deg);
-  display: none;
-}
-.menu {
-  margin-right: 50px;
-}
-@media screen and (max-width: 500px) {
-  .navicon {
-    display: block;
-  }
-  .desktop {
-    display: none;
-    position: absolute;
-    width: 100%;
-    left: 0;
-    right: 0;
-    top: 50px;
-  }
-  .menu {
-    width: 100%;
-  }
-  .phone {
-    width: 100%;
-  }
-}
-}
-
-
-
-
 #logo 
 
 {
