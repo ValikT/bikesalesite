@@ -15,9 +15,6 @@
 //= require_tree .
 //= require jquery
 //= require bootstrap
-
-$('.dropdown-toggle').dropdown()
-
 $(document).ready(function(){
 
   $('.navicon').click(function(e){
@@ -25,5 +22,9 @@ $(document).ready(function(){
   });
 
 });
+
+$('.dropdown-toggle').dropdown()
+
+
 
 
