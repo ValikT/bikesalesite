@@ -59,12 +59,42 @@ p {
 
 
 /* header */
- header nav {
-        height: auto;
-        width: auto;
-        display: block;
-        text-align: center;
-    }
+ header {
+}
+.logo {
+  float: left;
+}
+.desktop {
+  float: right;
+  display: flex;
+}
+.navicon {
+  float: right;
+  transform: rotate(90deg);
+  display: none;
+}
+.menu {
+  margin-right: 50px;
+}
+@media screen and (max-width: 500px) {
+  .navicon {
+    display: block;
+  }
+  .desktop {
+    display: none;
+    position: absolute;
+    width: 100%;
+    left: 0;
+    right: 0;
+    top: 50px;
+  }
+  .menu {
+    width: 100%;
+  }
+  .phone {
+    width: 100%;
+  }
+}
     
 #logo 
 
@@ -83,22 +113,6 @@ font: 15pt sans-serif;
 #logo:hover {
   color: #fff;
   text-decoration: none;
-}
-@media screen and (max-width: 720px){
-     
-    header {
-        height: auto;
-    }
-     
-    header > div,
-    header > div h1,
-    header nav {
-        height: auto;
-        width: auto;
-        display: block;
-        text-align: center;
-    }
-     
 }
 
 

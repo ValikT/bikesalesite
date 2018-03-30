@@ -18,5 +18,12 @@
 
 $('.dropdown-toggle').dropdown()
 
+$(document).ready(function(){
+
+  $('.navicon').click(function(e){
+  	$(this).next().slideToggle(500);
+  });
+
+});
 
 
