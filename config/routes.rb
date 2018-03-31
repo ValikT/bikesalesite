@@ -14,7 +14,7 @@ Rails.application.routes.draw do
   match '/shop',    to: 'static_pages#shop',    via: 'get'
   match '/about',   to: 'static_pages#about',   via: 'get'
   match '/contact', to: 'static_pages#contact', via: 'get'
-  match '/add_car', to: 'static_pages#add_car', via: 'get'
+  match '/pros', to: 'static_pages#pros', via: 'get'
   match '/our_advantages', to: 'static_pages#our_advantages', via: 'get'
 
 
