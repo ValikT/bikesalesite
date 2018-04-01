@@ -1,25 +1,63 @@
-<header>
-  <div class="header">
-    <div class="section-inner">
-      <div class="logo">ELBIKES.COM.UA</div>
-    </div>
-  </div>
-
-  <input type="checkbox" id="dws-menu">
-  <div class="leb-menu">
-    <label for="dws-menu"><img src="assets/icono-menu.png"></label>
-  </div>
-  <!-- nav -->
-  <nav class="menu">
-    <div class="section-inner indents">
-      <ul>
-         <li><%= link_to "Головна", root_path %></li>  
+<header class="navbar navbar-fixed-top navbar-inverse">
+  <div class="navbar-inner">
+    <div class="container">
+     
+      <%= link_to "ELBIKES", root_path , id: "logo" %>
+      
+      <nav>
+         <div class = "center">
+        <ul class="nav pull-right">
+          <li><%= link_to "Головна", root_path %></li>  
            <li><%= link_to "Магазин", shop_path %></li>
-        <li><%= link_to "Тест-драйв", our_advantages_path %></li>
-        <li><%= link_to "Мій кошик", cart_path %></li>
-<li> <%= link_to "Авторизація", new_model_registration_path %></li>
-        <li><%= link_to "Контакти", contact_path %></li>
-      </ul>
+      <ul class="nav pull-right">
+              <ul class="nav nav-pills">
+      <li class="dropdown">
+        <a class="dropdown-toggle" data-toggle="dropdown" href="#">Меню<b class="caret"></b></a>
+        <ul id="menu1" class="dropdown-menu">
+          <li><%= link_to "Тест-драйв", our_advantages_path %></li>
+          <li class="divider"></li>
+          <li><%= link_to "Контакти", contact_path %></li> 
+          <li class="divider"></li>
+          <li><%= link_to "Мій кошик", cart_path %></li>    
+        </ul>
+      </li>
+    </ul>
+
+
+
+<ul class="nav pull-right">
+              <ul class="nav nav-pills">
+      <li class="dropdown">
+        <a class="dropdown-toggle" data-toggle="dropdown" href="#">Авторизація<b class="caret"></b></a>
+        <ul id="menu1" class="dropdown-menu">
+ <% if current_model.nil? %>
+    <li>
+    <%= link_to model_session_path do %>
+      <i class="glyphicon glyphicon-user"></i> Увійти
+      <%end%>
+      </li>
+      <% else %> 
+      <li>
+      <%= link_to destroy_model_session_path, method: :delete do %>
+      <i class="glyphicon glyphicon-log-in"></i> Вийти
+  <%end%>
+      </li>
+       <% end %>
+          <li class="divider"></li>
+         <li> <%= link_to "Зареєструватися", new_model_registration_path %></li>
+        </ul>
+      </li>
+    </ul>
+     </ul>
+
+
+
+
+
+
+
+         </div>
+      </nav>
     </div>
-  </nav><!--/nav-->
+  </div>
 </header>
